@@ -55,10 +55,10 @@ internal class Program
         //Lista de musico
        List<Musico> Morat = new List<Musico> ();
        //Poliformi
-       Morat.Add(new Musico("Isaza"));
-       Morat.Add(new Musico("Villa") );
-       Morat.Add(new Bajista("Simon ","Bajo electrico"));
-       Morat.Add(new Baterista("Martin","Bateria"));
+       Morat.Add(new Musico("Juan Pablo Isaza"));
+       Morat.Add(new Musico("Juan Pablo Villamil") );
+       Morat.Add(new Bajista("Simon Vargas Morales ","Bajo electrico"));
+       Morat.Add(new Baterista("Martin Vargas Morales","Bateria"));
        //Ciclamos
        foreach(var m in Morat)
        {
