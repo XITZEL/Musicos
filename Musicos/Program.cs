@@ -1,4 +1,5 @@
-﻿class Musico
+﻿abstract class Musico     //Las clases abtractas solo pueden generar herencia, pero no pueden crear objetos directos
+
 {
     //propiedades
    public string Nombre{get;set;}
@@ -10,10 +11,12 @@
     {
         Console.WriteLine($"Hola, soy {Nombre}");
     }
-     public  virtual void Toca()//Vamos a redifinirlo
-    {
+    //Los metodos abstractos 
+    //Para implementar metodos abtractos debemos usar la palabra reservada "overide"
+     public /*virtual*/abstract void Toca();//Vamos a redifinirlo
+    /*{
         Console.WriteLine($"{Nombre} tocando su instrumento");
-    }
+    }*/
 }
     //Clases
      class Bajista: Musico
@@ -49,14 +52,16 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Musico Humbe = new Musico("Humbe");
-        Humbe.Saluda();
-        Humbe.Toca();
+        //No podemos tener objetos abtracto en este caso "Musicos"
+        //Musico Humbe = new Musico("Humbe");
+        //Humbe.Saluda();
+        //Humbe.Toca();
         //Lista de musico
+        //No puedo tener objetos abtractos pero si referencia
        List<Musico> Morat = new List<Musico> ();
        //Polimorfismo
-       Morat.Add(new Musico("Juan Pablo Isaza"));
-       Morat.Add(new Musico("Juan Pablo Villamil") );
+       //Morat.Add(new Musico("Juan Pablo Isaza"));
+       //Morat.Add(new Musico("Juan Pablo Villamil") );
        Morat.Add(new Bajista("Simon Vargas Morales ","Bajo electrico"));
        Morat.Add(new Baterista("Martin Vargas Morales","Bateria"));
        //Ciclamos
