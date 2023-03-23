@@ -54,7 +54,7 @@ internal class Program
         Humbe.Toca();
         //Lista de musico
        List<Musico> Morat = new List<Musico> ();
-       //Poliformi
+       //Polimorfismo
        Morat.Add(new Musico("Juan Pablo Isaza"));
        Morat.Add(new Musico("Juan Pablo Villamil") );
        Morat.Add(new Bajista("Simon Vargas Morales ","Bajo electrico"));
