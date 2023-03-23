@@ -7,7 +7,11 @@
    //Constructor
    public Musico(string n){Nombre=n;}
     //Metodos
-    public virtual void Saluda()
+    /*public virtual string GetSaluda():base.GetSaluda()//Terminar el ejercicio
+    {
+        ($"Hola, soy {Nombre}");
+    }*/
+    public virtual void  Saluda()
     {
         Console.WriteLine($"Hola, soy {Nombre}");
     }
