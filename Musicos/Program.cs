@@ -7,7 +7,7 @@
    //Constructor
    public Musico(string n){Nombre=n;}
     //Metodos
-    public void Saluda()
+    public virtual void Saluda()
     {
         Console.WriteLine($"Hola, soy {Nombre}");
     }
@@ -32,6 +32,10 @@
         {
             Console.WriteLine($"{Nombre}tocando su {Bajo}");
         }
+        public override void Saluda()
+        {
+            Console.WriteLine($"Hola, soy{Nombre}, y soy bajista");
+        }
     }
     class Baterista:Musico
     {
@@ -44,6 +48,10 @@
         public override void Toca()
         {
             Console.WriteLine($"{Nombre} tocando su {Bateria}");
+        }
+         public override void Saluda()
+        {
+            Console.WriteLine($"Hola, soy{Nombre}, y soy baterista");
         }
     }
 
