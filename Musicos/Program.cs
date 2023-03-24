@@ -7,16 +7,21 @@
    //Constructor
    public Musico(string n){Nombre=n;}
     //Metodos
-    /*public virtual string GetSaluda():base.GetSaluda()//Terminar el ejercicio
+    public virtual string GetSaluda()
     {
-        ($"Hola, soy {Nombre}");
-    }*/
+            return($"Hola, soy{Nombre}");
+    }
+    
     public virtual void  Saluda()
     {
-        Console.WriteLine($"Hola, soy {Nombre}");
+        Console.WriteLine(GetSaluda());//Se usa para reutilizarlo
     }
-    //Los metodos abstractos 
-    //Para implementar metodos abtractos debemos usar la palabra reservada "overide"
+    /*METODOS ABSTRACTOS: 
+    - DEBEN estar en clases abtractas para existir.
+    - NO tienen implementación
+    - OBLIGATORIO redifinarse en subclases
+    - SE DEBE usar la palabra reservada "Overide"
+    - */
      public /*virtual*/abstract void Toca();//Vamos a redifinirlo
     /*{
         Console.WriteLine($"{Nombre} tocando su instrumento");
@@ -38,7 +43,7 @@
         }
         public override void Saluda()
         {
-            Console.WriteLine($"Hola, soy{Nombre}, y soy bajista");
+            Console.WriteLine(GetSaluda()+"Soy Bajista");
         }
     }
     class Baterista:Musico
@@ -55,7 +60,7 @@
         }
          public override void Saluda()
         {
-            Console.WriteLine($"Hola, soy{Nombre}, y soy baterista");
+            Console.WriteLine(GetSaluda()+"Soy Baterista");
         }
     }
 
